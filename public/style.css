@@ -1,11 +1,11 @@
 @font-face {
     font-family: 'armhandwrite';
-    src: url('/fonts/ArmAllegroU.ttf') ;
+    src: url('/public/fonts/ArmAllegroU.ttf') ;
 }
 
 @font-face {
     font-family: "vrdznagir";
-    src: url("/fonts/Vrdznagir.otf");
+    src: url("/public/fonts/Vrdznagir.otf");
 }
 
 body {
@@ -315,19 +315,10 @@ p{
     .fst-img {
         width: 278px;
         height: 301px;
-        /* border-radius: 138px 0 !important; */
     }
 
-    /* .main-text{
-        width: 32%;
-    } */
-
-    .main-img{
-        /* width: 67%; */
-    }
     .text-box {
         margin-top: 55px;
-        /* margin-left: 10%; */
     }
 
     .text2 {
@@ -427,8 +418,8 @@ p{
 
 @media screen and (max-width: 672px) {
     .img-main {
-        height: 386px;
-        width: 248px;
+        /* height: 386px; */
+        width: 300px;
     }
 
     .img-left,
@@ -438,16 +429,16 @@ p{
     }
 
     .img-left {
-        margin-right: -20px;
+        margin-right: -28px;
     }
 
     .img-right {
-        margin-left: -20px;
+        margin-left: -28px;
     }
 
     .hscd-content,
     .fst-content {
-        font-size: 23px;
+        font-size: 32px;
     }
 
     .hscd-content {
@@ -459,7 +450,7 @@ p{
     }
 
     .tm-name{
-        font-size: 14px;
+        font-size: 20px;
     }
 
     .img-scd{
@@ -470,7 +461,7 @@ p{
 
     .fst-img{
         width: 274px;
-        height: 251px;
+        height: 276px;
     }
 
     .text-box{
@@ -482,7 +473,7 @@ p{
     }
     
     .text2 {
-        font-size: 18px;
+        font-size: 20px;
     }
 
     .month{
@@ -515,13 +506,17 @@ p{
     .text3{
         font-size: 20px;
     }
+
+    .text3 i {
+        font-size: 37px !important;
+    }
 }
 
 
 @media screen and (max-width: 580px) {
     .img-main {
-        height: 290px;
-        width: 193px;
+        height: 335px;
+        width: 243px;
     }
     
     .img-left,
@@ -532,17 +527,22 @@ p{
     
     .fst-content {
         top: 27px;
-        font-size: 18px;
+        font-size: 28px;
     }
     
     .hscd-content {
-        top: 243px;
-        font-size: 16px;
+        top: 261px;
+        font-size: 24px;
     }
 
     .timer{
-        font-size: 26px;
+        /* font-size: 26px; */
         height: 150px;
+        padding: 0 23%;
+    }
+
+    .timer div{
+        margin-right: 24px;
     }
 
     .text-box {
@@ -551,20 +551,23 @@ p{
     }
 
     .text-h1 {
-        font-size: 23px;
+        font-size: 24px;
     }
 
     .text2 {
-        font-size: 15px;
+        font-size: 21px;
     }
 
     .fst-img{
-        top: 246px;
+        top: 303px;
+        left: 100px;
+        height: 300px;
+        width: 185px;
     }
 
     .img-scd{
         height: 347px;
-        width: 216px;
+        width: 228px;
         margin-right: 24px;
     }
     
@@ -577,7 +580,7 @@ p{
     }
 
     .scd-box{
-        margin-top: 0;
+        margin-top: 245px;
     }
 
     .loc-name{
@@ -592,6 +595,10 @@ p{
     
     .text3 {
         font-size: 14px;
+    }
+
+    .text3 i {
+        font-size: 28px !important;
     }
 
     .locations {
@@ -614,29 +621,29 @@ p{
 
 @media screen and (max-width: 463px) {
     .img-main {
-        height: 226px;
-        width: 151px;
+        height: 325px;
+        width: 211px;
     }
     
     .img-left,
     .img-right {
-        width: 130px;
-        height: 178px;
+        width: 97px;
+        height: 162px;
     }
     
     .fst-content {
-        font-size: 16px;
+        /* font-size: 16px; */
     }
     
     .hscd-content {
-        top: 196px;
-        font-size: 13px;
+        /* top: 196px; */
+        font-size: 22px;
     }
 
     .timer{
         height: 140px;
         font-size: 24px;
-        padding: 0px 26%;
+        padding: 0px 15%;
     }
 
     .tm-name{
@@ -662,12 +669,16 @@ p{
         text-align: center;
     }
 
+    .text-h1{
+        font-size: 26px;
+    }
+
     .main-box .main-text {
         width: 100%;
     }
 
     .text2 {
-    font-size: 17px;
+    font-size: 22px;
     }
 
     .cld{
@@ -696,6 +707,22 @@ p{
         margin-right: 20px;
         height: 322px;
         width: 204px;
+    }
+
+    .text3{
+        font-size: 15px;
+    }
+
+    .text3 i {
+        font-size: 22px !important;
+    }
+
+    .locations{
+        width: 180px;
+    }
+
+    .scd-box{
+        margin-top: 0;
     }
 } 
   @media screen and (max-width: 353px) {
