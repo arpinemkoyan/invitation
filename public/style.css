@@ -1,11 +1,11 @@
 @font-face {
     font-family: 'armhandwrite';
-    src: url('/public/fonts/ArmAllegroU.ttf') ;
+    src: url('./fonts/ArmAllegroU.ttf') ;
 }
 
 @font-face {
     font-family: "vrdznagir";
-    src: url("/public/fonts/Vrdznagir.otf");
+    src: url("./fonts/Vrdznagir.otf");
 }
 
 body {

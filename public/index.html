@@ -143,9 +143,9 @@ Play button -->
     <!-- <div>
         <p style="text-align: center;">Սիրով կսպասենք Ձեզ</p>
     </div>
-</body>
+</body>-->
 
-<script>
+<script> 
     const endTime = new Date('Octaber 5, 2024 12:00:00')
 
     function updateTimer() {
@@ -170,20 +170,21 @@ Play button -->
     const x = setInterval(updateTimer, 1000);
     // Initial call to display the timer immediately on page load
     updateTimer();
-    var audio = document.getElementById('backgroundMusic');
-    var playButton = document.getElementById('playButton');
-    playButton.addEventListener('click', function() {
-        audio.play().catch(function(error) {
-            console.error('Audio playback failed:', error);
-        });
-    });
-    document.addEventListener('DOMContentLoaded', function() {
-        audio.muted = false;
-        audio.play().catch(function(error) {
-            console.log('Audio autoplay blocked, waiting for user interaction.');
-        });
-        audio.muted = false;
-    });
+
+    // var audio = document.getElementById('backgroundMusic');
+    // var playButton = document.getElementById('playButton');
+    // playButton.addEventListener('click', function() {
+    //     audio.play().catch(function(error) {
+    //         console.error('Audio playback failed:', error);
+    //     });
+    // });
+    // document.addEventListener('DOMContentLoaded', function() {
+    //     audio.muted = false;
+    //     audio.play().catch(function(error) {
+    //         console.log('Audio autoplay blocked, waiting for user interaction.');
+    //     });
+    //     audio.muted = false;
+    // });
 </script>
 
 </html>
