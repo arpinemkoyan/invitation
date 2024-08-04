@@ -623,20 +623,17 @@ p{
     .img-main {
         height: 325px;
         width: 211px;
+        box-shadow: 9px 8px 8px 0 rgba(0, 0, 0, 0.2), -19px 3px 20px 0 rgba(0, 0, 0, 0.19);
     }
     
     .img-left,
     .img-right {
         width: 97px;
-        height: 162px;
+        height: 158px;
+        
     }
-    
-    .fst-content {
-        /* font-size: 16px; */
-    }
-    
+
     .hscd-content {
-        /* top: 196px; */
         font-size: 22px;
     }
 
@@ -723,6 +720,10 @@ p{
 
     .scd-box{
         margin-top: 0;
+    }
+
+    .timer div{
+        margin-right: 17px;
     }
 } 
   @media screen and (max-width: 353px) {
