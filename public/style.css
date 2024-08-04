@@ -12,6 +12,14 @@ body {
     background-color: #fff7ee !important;
 }
 
+#movingImage {
+    position: relative;
+    /* Necessary for using left property */
+    left: 0;
+    transition: left 1s ease;
+    /* Smooth transition effect */
+}
+
 p{
     margin: 30px 0;
 }
