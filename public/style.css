@@ -222,6 +222,7 @@ p{
 }
 
 .text2 {
+    width: 432px;
     color: #555555;
     font-size: 26px;
     transform-origin: center center;
@@ -275,6 +276,10 @@ p{
         width: 240px;
         height: 360px;
     }
+
+    .text2{
+        width: 330px;
+    }
   
 } 
 
@@ -306,6 +311,9 @@ p{
         left: 19vw;
     }
 
+    .text2{
+        width: 312px;
+    }
 }
 
 @media screen and (max-width: 987px) {
@@ -383,6 +391,7 @@ p{
 
     .text2 {
         font-size: 24px;
+        width: 291px;
     }
 
     .cld {
@@ -465,6 +474,7 @@ p{
 
     .text2{
         font-size: 21px;
+        width: 251px;
     }
 
     .cld {
@@ -544,6 +554,7 @@ p{
     .fst-img{
         width: 274px;
         height: 276px;
+        top: 118px;
     }
 
     .text-box{
@@ -556,6 +567,7 @@ p{
     
     .text2 {
         font-size: 20px;
+        width: 314px;
     }
 
     .month{
@@ -639,53 +651,74 @@ p{
         margin-right: 24px;
     }
 
+    .main-box {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .main-text,
+    .main-img {
+        width: 100%;
+    }
+    
     .text-box {
-        width: 213px;
-        margin-left: 10px;
+        margin: 0;
+        width: 100%;
+        padding: 20px;
     }
-
+    
+    .full-text {
+        text-align: center;
+    }
+    
     .text-h1 {
-        font-size: 24px;
-    }
-
-    .text2 {
-        font-size: 21px;
-    }
-
-    .fst-img{
-        top: 303px;
-        left: 100px;
-        height: 300px;
-        width: 185px;
-    }
-
-    .img-scd{
-        height: 347px;
-        width: 228px;
-        margin-right: 24px;
+        font-size: 26px;
     }
     
     .main-box .main-text {
-        width: 16%;
+        width: 100%;
     }
-
+    
+    .text2 {
+        font-size: 22px;
+        width: 100%;
+    }
+    
+    .cld {
+        margin-left: 0;
+        width: 189px;
+        height: 147px;
+    }
+    
+    .month {
+        margin-left: 33px;
+    }
+    
     .main-img {
-        width: 90%;
+        margin-top: -45px;
+        padding: 0 15px;
     }
-
-    .scd-box{
-        margin-top: 245px;
+    
+    .fst-img {
+        left: 25px;
+        top: 36px;
+        width: 166px;
+        height: 224px;
+    }
+    
+    .img-scd {
+        height: 322px;
+        width: 204px;
     }
 
     .loc-name{
-    position: relative;
+        position: relative;
         top: 20px;
     }
 
     .date {
         font-size: 20px;
     }
-    
     
     .text3 {
         font-size: 14px;
@@ -713,8 +746,7 @@ p{
         left: 40vw;
         letter-spacing: 3px;
     }
-                
-
+           
 } 
 
 @media screen and (max-width: 483px) {
@@ -758,63 +790,16 @@ p{
         margin-top: -12px;
     }
 
-    .main-box{
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .main-text, .main-img{
-        width: 100%;
-    }
-
-    .text-box{
-        margin: 0;
-        width: 100%;
-        padding: 20px;
-    }
-    
-    .full-text{
-        text-align: center;
-    }
-
-    .text-h1{
-        font-size: 26px;
-    }
-
-    .main-box .main-text {
-        width: 100%;
-    }
-
-    .text2 {
-    font-size: 22px;
-    }
-
-    .cld{
-        margin-left: 0;
-        width: 189px;
-        height: 147px;
-    }
-
-    .month{
-        margin-left: 33px;
-    }
-
     .main-img{
         margin-top: 60px;
-        padding: 0 15px;
     }
 
     .fst-img{
-        left: 25px;
         top: 0;
-        width: 240px;
-        height: 224px;
     }
 
     .img-scd{
         margin-right: 20px;
-        height: 322px;
-        width: 204px;
     }
 
     .text3{
@@ -827,10 +812,6 @@ p{
 
     .locations{
         width: 180px;
-    }
-
-    .scd-box{
-        margin-top: 0;
     }
 
     .timer div{
