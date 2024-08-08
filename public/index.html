@@ -38,9 +38,9 @@
         <!-- header -->
         <div class="header">
             <div class="header-img">
-                <img class="img-left" src="image/ARLI-8181.jpg"></img>
-                <img class="img-main" src="./image/ARLI-8182.jpg"></img>
-                <img class="img-right" src="./image/ARLI-8184.jpg"></img>
+                <img class="img-left imgs" src="image/ARLI-8181.jpg"></img>
+                <img class="img-main imgs" src="./image/ARLI-8182.png"></img>
+                <img class="img-right imgs" src="./image/ARLI-8184.jpg"></img>
             </div>
             <div class="fst-content">
                 <p>Ժորա և Արփինե</p>
@@ -75,8 +75,8 @@
                     <div class="full-text">
                         <p class="text-h1">Սիրելի հյուրեր</p>
                         <p class="text2">Մենք ճանապարհ ենք անցել՝ լի սիրով, երջանկությամբ և միասին հաղթահարած
-                            դժվարություններով։ Այժմ եկել է ժամանակը միավորվելու՝ որպես ամուսիններ և մենք՝ 
-                            սիրով և մեծ ուրախությամբ, հրավիրում ենք ձեզ մեր սիրո և երջանկության օրը միասին 
+                            դժվարություններով։ Այժմ եկել է ժամանակը միավորվելու՝ որպես ամուսիններ և մենք՝
+                            սիրով և մեծ ուրախությամբ, հրավիրում ենք ձեզ մեր սիրո և երջանկության օրը միասին
                             նշելու, որը տեղի կունենա`
                         </p>
                     </div>
@@ -88,8 +88,8 @@
                 </div>
             </div>
             <div class="main-img">
-                <img class="fst-img" src="./image/8622c2484e2cbb07868395d1667043b1.jpg" />
-                <img class="img-scd" src="./image/ARLI-8185.jpg" />
+                <img class="fst-img imgs" src="./image/8622c2484e2cbb07868395d1667043b1.jpg" />
+                <img class="img-scd imgs" src="./image/ARLI-8185.jpg" />
 
             </div>
         </div>
@@ -98,13 +98,14 @@
         <div class="scd-box">
             <p class="schedule">Ծրագիր</p>
             <div class="schedule-content">
-                <div>
-                    <img class="locations" src="./image/icons.png" />
-
+                <div class="sched-imgs">
+                    <img class="imgs" src="./image/bride.png" />
+                    <img class="imgs" src="./image/church.png" />
+                    <img class="imgs" src="./image/party.png" />
                 </div>
                 <div class="loc-name">
-                    <div>
-                        <p class="date">13։00</p>
+                    <div class="hour-loc imgs">
+                        <p class="date">13։30</p>
                         <p class="text3">
                             <a href="https://yandex.ru/maps/-/CDWOMUP0" target="_blank">
                                 <i class="fa-solid fa-location-dot" style="color: #4a4952; font-size: 43px;"></i>
@@ -112,7 +113,7 @@
                             </a>
                         </p>
                     </div>
-                    <div>
+                    <div class="hour-loc imgs">
                         <p class="date">14։30</p>
                         <p class="text3">
                             <a href="https://yandex.ru/maps/-/CDWOMI--" target="_blank">
@@ -121,7 +122,7 @@
                             </a>
                         </p>
                     </div>
-                    <div>
+                    <div class="hour-loc imgs">
                         <p class="date">17։00</p>
                         <p class="text3">
                             <a href="https://yandex.ru/maps/-/CDWOIOLq" target="_blank">
@@ -131,7 +132,6 @@
                         </p>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
@@ -162,7 +162,6 @@
     const x = setInterval(updateTimer, 1000);
     // Initial call to display the timer immediately on page load
     updateTimer();
-
     var audio = document.getElementById('backgroundMusic');
     document.getElementById('movingImage').addEventListener('click', function() {
         audio.play().catch(function(error) {
@@ -170,11 +169,37 @@
         });
         this.style.left = '70vw';
         setTimeout(() => {
-            document.getElementById('full').style.display = "block";
             document.getElementById('automusic').style.display = "none";
+            document.getElementById('full').style.display = "block";
         }, 2000); // 5000 milliseconds = 5 seconds
+        observeImages();
     });
 
+    function observeImages() {
+        const images = document.querySelectorAll('.imgs');
+        // Options for the observer (threshold controls when the callback is triggered)
+        const options = {
+            root: null,
+            threshold: 0.4 // Trigger when 40% of the image is in view
+        };
+        // Callback function for the observer
+        const callback = (entries, observer) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.classList.add('visible');
+                    }, index * 300); // Staggered effect
+                    observer.unobserve(entry.target); // Stop observing once it's animated
+                }
+            });
+        };
+        // Create the Intersection Observer
+        const observer = new IntersectionObserver(callback, options);
+        // Observe each image
+        images.forEach(image => {
+            observer.observe(image);
+        });
+    }
 </script>
 
 </html>
