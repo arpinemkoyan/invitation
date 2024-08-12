@@ -580,11 +580,11 @@ p{
     }
 
     .img-left {
-        margin-right: -2px;
+        margin-right: -8px;
     }
 
     .img-right {
-        margin-left: -2px;
+        margin-left: -8px;
     }
 
     .hscd-content,
@@ -832,8 +832,10 @@ p{
 
 @media screen and (max-width: 463px) {
     .img-main {
-        height: 325px;
-        width: 211px;
+        height: 301px;
+        width: 184px;
+        /* height: 325px; */
+        /* width: 211px; */
         box-shadow: 9px 8px 8px 0 rgba(0, 0, 0, 0.2), -19px 3px 20px 0 rgba(0, 0, 0, 0.19);
     }
     
@@ -844,8 +846,12 @@ p{
         
     }
 
+    .fst-content{
+        font-size: 25px;
+    }
+
     .hscd-content {
-        font-size: 22px;
+        font-size: 20px;
     }
 
     .timer{
