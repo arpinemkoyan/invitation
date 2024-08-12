@@ -580,11 +580,11 @@ p{
     }
 
     .img-left {
-        margin-right: -28px;
+        margin-right: -2px;
     }
 
     .img-right {
-        margin-left: -28px;
+        margin-left: -2px;
     }
 
     .hscd-content,
@@ -787,6 +787,11 @@ p{
         font-size: 28px !important;
     }
 
+    .scd-box{
+        margin-top: 0;
+        padding-top: 0;
+    }
+
     .schedule-content {
         padding-left: 96px;
    }
@@ -900,7 +905,18 @@ p{
         left: 5vw;
     }
 } 
-  @media screen and (max-width: 353px) {
+
+@media screen and (max-width: 400px){
+    .img-left {
+        margin-right: -29px;
+    }
+    
+    .img-right {
+        margin-left: -29px;
+    }
+}
+
+@media screen and (max-width: 353px) {
     .img-main {
         height: 186px;
         width: 122px;
